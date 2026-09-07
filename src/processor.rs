@@ -1,4 +1,5 @@
 use {
+    crate::instruction::Instruction,
     solana_account_info::AccountInfo,
     solana_program_error::ProgramResult,
     solana_pubkey::Pubkey,
@@ -7,7 +8,10 @@ use {
 pub fn process(
     _program_id: &Pubkey,
     _accounts: &[AccountInfo],
-    _input: &[u8],
+    input: &[u8],
 ) -> ProgramResult {
-    todo!();
+    let instruction = Instruction::unpack(input)?;
+    match instruction {
+        _ => todo!(),
+    }
 }
