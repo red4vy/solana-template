@@ -6,9 +6,9 @@ pub enum Instruction {
 }
 impl Instruction {
     pub fn unpack(input: &[u8]) -> Result<Self, ProgramError> {
-        use ProgramError::InvalidInstructionData;
-
-        let (&_tag, _rest) = input.split_first().ok_or(InvalidInstructionData)?;
+        let (&_tag, _rest) = input
+            .split_first()
+            .ok_or(ProgramError::InvalidInstructionData)?;
         todo!();
     }
 }
