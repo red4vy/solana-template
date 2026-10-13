@@ -2,7 +2,6 @@ use solana_program_error::ProgramError;
 
 #[repr(u8)]
 pub enum Instruction {
-    // replace with your variants
     Todo,
 }
 impl Instruction {
