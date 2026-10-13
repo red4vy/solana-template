@@ -4,10 +4,13 @@ use {
     solana_pubkey::Pubkey,
 };
 
-pub fn process(
-    _program_id: &Pubkey,
-    _accounts: &[AccountInfo],
-    _input: &[u8],
-) -> ProgramResult {
-    todo!();
+pub struct Processor {}
+impl Processor {
+    pub fn process(
+        _program_id: &Pubkey,
+        _accounts: &[AccountInfo],
+        _input: &[u8],
+    ) -> ProgramResult {
+        todo!();
+    }
 }
