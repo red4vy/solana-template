@@ -5,13 +5,16 @@ use {
     solana_pubkey::Pubkey,
 };
 
-pub fn process(
-    _program_id: &Pubkey,
-    _accounts: &[AccountInfo],
-    input: &[u8],
-) -> ProgramResult {
-    let instruction = Instruction::unpack(input)?;
-    match instruction {
-        _ => todo!(),
+pub struct Processor {}
+impl Processor {
+    pub fn process(
+        _program_id: &Pubkey,
+        _accounts: &[AccountInfo],
+        input: &[u8],
+    ) -> ProgramResult {
+        let instruction = Instruction::unpack(input)?;
+        match instruction {
+            _ => todo!(),
+        }
     }
 }
